@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms'
+import { FormsModule } from '@angular/forms';
+
 
 
 import { AppComponent } from './app.component';
@@ -15,7 +16,7 @@ import { SetScaleDirective } from './set-scale.directive';
 import { ButtonComponent } from './button/button.component';
 import { DiscardButtonComponent } from './discard-button/discard-button.component';
 import { DraggableComponent } from './draggable/draggable.component';
-
+import { SocketService } from './socket.service';
 
 @NgModule({
   declarations: [
@@ -36,7 +37,9 @@ import { DraggableComponent } from './draggable/draggable.component';
     BrowserModule,
     FormsModule
   ],
-  providers: [],
+  providers: [SocketService],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule { 
+  
+}
